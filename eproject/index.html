@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratchy Nib</title>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.98/build/spline-viewer.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+    <nav id="mainNav" style="z-index: 1000;">
+        <div class="nav-logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Scratchy Nib
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#history">History </a>
+            <div class="nav-dropdown desktop-only">
+                <a href="#" class="dropdown-trigger">Calligraphy Styles <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#traditional">Traditional Calligraphy</a>
+                    <a href="#contemporary">Contemporary Calligraphy</a>
+                    <a href="#hand-lettering">Hand Lettering</a>
+                    <a href="#modern">Moden Calligraphy</a>
+                </div>
+            </div>
+            <a href="#calligraphy-styles" class="mobile-only">Calligraphy Styles</a>
+            <a href="#why-calligraphy">Why Calligraphy</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <button class="nav-hamburger">
+            <span></span>
+        </button>
+    </nav>
+    <div class="mobile-backdrop"></div>
+    <section class="hero" id="hero" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="0">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./assets/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text-overlay">
+            <h1>Scatchy Nib</h1>
+            <p>Discover the Art of Beautiful Calligraphy</p>
+        </div>
+        </div>
+    </section>
+    <section class="features-section" id="features" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1200">
+        <div class="features-heading" data-aos="zoom-in" data-aos-delay="150">
+            <span class="fancy-title">Calligraphy Styles</span>
+            <span class="fancy-underline">
+        <svg viewBox="0 0 110 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13 Q55 2 105 13" stroke="#e2c89b" stroke-width="2.5" fill="none"/>
+          <ellipse cx="55" cy="13" rx="2.5" ry="2" fill="#bfa181"/>
+        </svg>
+      </span>
+        </div>
+        <div class="features-grid" id="calligraphy-styles">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="0" data-bg="linear-gradient(120deg, #181818 60%, #232323 100%)">
+                <video class="vid" src="./assets/Calligraphy1.mp4" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100" data-bg="linear-gradient(120deg, #232323 60%, #181818 100%)">
+                <img class="img" src="./assets/the.jpg" alt="Copperplate Calligraphy">
+                <div class="textBox">
+                    <p class="text head">Copperplate</p>
+                    <span>Copperplate is a classic, elegant script style known for its flowing curves and fine hairlines, popular in formal invitations and certificates.</span>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200" data-bg="linear-gradient(120deg, #1a1a1a 60%, #232323 100%)">
+                <img class="img" src="./assets/Blackish with white ink.jpg" alt="Arabic Calligraphy">
+                <div class="textBox">
+                    <p class="text head">Arabic</p>
+                    <span>Arabic calligraphy is a revered art form in the Islamic world, featuring intricate, flowing lines and a variety of script styles such as Diwani and Kufic.</span>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300" data-bg="linear-gradient(120deg, #23232d 60%, #181818 100%)">
+                <video class="vid" src="./assets/videoplayback.mp4" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400" data-bg="linear-gradient(120deg, #232323 60%, #181818 100%)">
+                <img class="img" src="./assets/A note addressed to Mrs_ Darcy_.jpg" alt="Brush Calligraphy">
+                <div class="textBox">
+                    <p class="text head">Brush</p>
+                    <span>Brush calligraphy uses flexible brush pens or traditional brushes to create bold, dynamic strokes and expressive letterforms.</span>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500" data-bg="linear-gradient(120deg, #181818 60%, #232323 100%)">
+                <img class="img" src="./assets/Каллиграфия.jpg" alt="Roman Calligraphy">
+                <div class="textBox">
+                    <p class="text head">Roman</p>
+                    <span>Roman calligraphy is based on the classic Roman capitals, known for their balanced proportions and timeless elegance.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Calligraphy Style Sections -->
+    <section class="calligraphy-styles-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="style-container">
+            <div class="style-content" data-aos="fade-right" data-aos-delay="150">
+                <h2 class="style-title" id="traditional">Traditional Calligraphy</h2>
+                <div class="style-description">
+                    <p>Traditional calligraphy represents the timeless art of beautiful writing, deeply rooted in cultural heritage and historical significance. This style encompasses various classical scripts including:</p>
+                    <ul>
+                        <li>Copperplate - Known for its elegant, flowing curves and fine hairlines</li>
+                        <li>Gothic - Characterized by its bold, angular forms and dramatic presence</li>
+                        <li>Roman - Celebrated for its balanced proportions and classical beauty</li>
+                        <li>Uncial - Distinguished by its rounded, majuscule letterforms</li>
+                    </ul>
+                    <p>Traditional calligraphy requires precise technique, patience, and dedication to master. It serves as the foundation for modern calligraphic practices and continues to inspire contemporary artists.</p>
+                </div>
+            </div>
+            <div class="style-image" data-aos="fade-left" data-aos-delay="200">
+                <img src="./assets/traditional.jpg" alt="Traditional Calligraphy" class="style-img">
+            </div>
+        </div>
+
+        <div class="style-container reverse">
+            <div class="style-content" data-aos="fade-left" data-aos-delay="150">
+                <h2 class="style-title" id="contemporary">Contemporary Calligraphy</h2>
+                <div class="style-description">
+                    <p>Contemporary calligraphy bridges the gap between traditional techniques and modern artistic expression. This style embraces:</p>
+                    <ul>
+                        <li>Experimental letterforms and compositions</li>
+                        <li>Integration of digital tools and traditional methods</li>
+                        <li>Fusion of different cultural calligraphic traditions</li>
+                        <li>Innovative use of materials and surfaces</li>
+                    </ul>
+                    <p>Contemporary calligraphers often push boundaries while maintaining respect for traditional principles, creating works that are both innovative and rooted in calligraphic heritage.</p>
+                </div>
+            </div>
+            <div class="style-image" data-aos="fade-right" data-aos-delay="200">
+                <img src="./assets/contemporay.jpg" alt="Contemporary Calligraphy" class="style-img">
+            </div>
+        </div>
+
+        <div class="style-container">
+            <div class="style-content" data-aos="fade-right" data-aos-delay="150">
+                <h2 class="style-title" id="hand-lettering">Hand Lettering</h2>
+                <div class="style-description">
+                    <p>Hand lettering is the art of drawing letters, creating custom typography that combines calligraphic principles with illustration techniques. Key aspects include:</p>
+                    <ul>
+                        <li>Custom letterform design and composition</li>
+                        <li>Integration of decorative elements and flourishes</li>
+                        <li>Versatility in style and application</li>
+                        <li>Adaptability to various media and surfaces</li>
+                    </ul>
+                    <p>Hand lettering artists create unique, one-of-a-kind designs that can be applied to everything from signage to digital art, offering endless possibilities for creative expression.</p>
+                </div>
+            </div>
+            <div class="style-image" data-aos="fade-left" data-aos-delay="200">
+                <img src="./assets/hand.jpg" alt="Hand Lettering" class="style-img">
+            </div>
+        </div>
+
+        <div class="style-container reverse">
+            <div class="style-content" data-aos="fade-left" data-aos-delay="150">
+                <h2 class="style-title" id="modern">Modern Calligraphy</h2>
+                <div class="style-description">
+                    <p>Modern calligraphy represents the evolution of traditional techniques into current artistic practices. This style features:</p>
+                    <ul>
+                        <li>Relaxed, expressive letterforms</li>
+                        <li>Contemporary tools and materials</li>
+                        <li>Personal style development</li>
+                        <li>Digital integration and applications</li>
+                    </ul>
+                    <p>Modern calligraphy has gained popularity in recent years, finding its place in wedding invitations, social media, and commercial design while maintaining its artistic integrity.</p>
+                </div>
+            </div>
+            <div class="style-image" data-aos="fade-right" data-aos-delay="200">
+                <img src="./assets/modernc.jpg" alt="Modern Calligraphy" class="style-img">
+            </div>
+        </div>
+    </section>
+    <section class="history-section" id="history" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1200">
+        <div class="history-heading" data-aos="zoom-in" data-aos-delay="200">
+            <span class="fancy-title" id="history">History of Calligraphy Styles</span>
+            <span class="fancy-underline">
+        <svg viewBox="0 0 110 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13 Q55 2 105 13" stroke="#e2c89b" stroke-width="2.5" fill="none"/>
+          <ellipse cx="55" cy="13" rx="2.5" ry="2" fill="#bfa181"/>
+        </svg>
+      </span>
+        </div>
+        <div class="history-grid">
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="0">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Gothic</div>
+                    <div class="card-more">
+                        Medieval Europe, 12th–17th centuries<br> Gothic (Blackletter) calligraphy emerged in Western Europe during the Middle Ages. Its dense, angular forms were ideal for manuscript production and became synonymous with medieval books,
+                        especially in Germany and England. The style declined after the invention of the printing press but remains popular for its dramatic look.
+                    </div>
+                </div>
+            </div>
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Copperplate</div>
+                    <div class="card-more">
+                        Europe, 17th–19th centuries<br> Copperplate calligraphy developed alongside the rise of copperplate engraving. Its elegant, flowing script was used for formal documents and correspondence. The style is known for its fine hairlines
+                        and shaded downstrokes, achieved with a pointed nib.
+                    </div>
+                </div>
+            </div>
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Arabic</div>
+                    <div class="card-more">
+                        Middle East, 7th century–present<br> Arabic calligraphy is a revered art in Islamic culture, evolving from early Kufic scripts to ornate styles like Diwani and Thuluth. It is used in religious texts, architecture, and art, emphasizing
+                        beauty and spiritual meaning in every stroke.
+                    </div>
+                </div>
+            </div>
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Modern</div>
+                    <div class="card-more">
+                        20th century–present<br> Modern calligraphy is a contemporary movement that blends traditional techniques with personal expression. Artists experiment with forms, tools, and media, resulting in a diverse range of styles that are
+                        often playful and innovative.
+                    </div>
+                </div>
+            </div>
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Brush</div>
+                    <div class="card-more">
+                        East Asia, ancient–present<br> Brush calligraphy has roots in Chinese, Japanese, and Korean traditions. Using brushes and ink, artists create expressive, dynamic strokes. The style is deeply connected to philosophy and aesthetics
+                        in East Asian cultures.
+                    </div>
+                </div>
+            </div>
+            <div class="history-card" tabindex="0" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-content">
+                    <span class="card-flourish">
+            <svg viewBox="0 0 48 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 14 Q24 2 44 14" stroke="#e2c89b" stroke-width="2" fill="none"/>
+              <ellipse cx="24" cy="14" rx="1.8" ry="1.3" fill="#bfa181"/>
+            </svg>
+          </span>
+                    <span class="chevron">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6,9 11,14 16,9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+                    <div class="card-title">Roman</div>
+                    <div class="card-more">
+                        Ancient Rome, 1st century BCE–present<br> Roman calligraphy is based on the monumental capitals carved on Roman buildings. Its clear, balanced forms influenced Western writing for centuries and remain a model of classical beauty
+                        and proportion.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-calligraphy-section" id="why-calligraphy" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1200">
+        <div class="why-heading" data-aos="zoom-in" data-aos-delay="250">
+            <span class="fancy-title" id="why-calligraphy">Why Calligraphy?</span>
+            <span class="fancy-underline">
+        <svg viewBox="0 0 110 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13 Q55 2 105 13" stroke="#e2c89b" stroke-width="2.5" fill="none"/>
+          <ellipse cx="55" cy="13" rx="2.5" ry="2" fill="#bfa181"/>
+        </svg>
+      </span>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="bento-title">Artistic Expression</div>
+                <div class="bento-desc">Calligraphy transforms writing into art, allowing for personal creativity and unique visual beauty in every stroke.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="bento-title">Mindfulness & Relaxation</div>
+                <div class="bento-desc">The slow, deliberate movements in calligraphy help people relax, focus, and find a meditative state.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="bento-title">Cultural Heritage</div>
+                <div class="bento-desc">Practicing calligraphy connects people to centuries-old traditions and the rich history of written language.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="bento-title">Personal Touch</div>
+                <div class="bento-desc">Handwritten calligraphy adds warmth and personality to invitations, letters, and gifts, making them truly special.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="bento-title">Community & Sharing</div>
+                <div class="bento-desc">Calligraphy brings people together through workshops, clubs, and online communities, fostering connection and learning.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="bento-title">Skill & Mastery</div>
+                <div class="bento-desc">The challenge of mastering new scripts and techniques keeps calligraphers engaged and always learning.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="600">
+                <div class="bento-title">Therapeutic Value</div>
+                <div class="bento-desc">Practicing calligraphy can reduce stress and anxiety, offering a calming, meditative experience.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="700">
+                <div class="bento-title">Digital Adaptation</div>
+                <div class="bento-desc">Modern technology allows calligraphy to thrive in digital art, social media, and graphic design.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="800">
+                <div class="bento-title">Gift & Celebration</div>
+                <div class="bento-desc">Custom calligraphy is a cherished addition to weddings, events, and special occasions, making memories last.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="900">
+                <div class="bento-title">Educational Tool</div>
+                <div class="bento-desc">Calligraphy is used in schools and workshops to teach patience, fine motor skills, and artistic appreciation.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="1000">
+                <div class="bento-title">Branding & Identity</div>
+                <div class="bento-desc">Businesses and artists use calligraphy to create unique logos and branding that stand out and feel personal.</div>
+            </div>
+            <div class="bento-item" data-aos="fade-up" data-aos-delay="1100">
+                <div class="bento-title">Therapeutic Practice</div>
+                <div class="bento-desc">Many find the repetitive, mindful motions of calligraphy to be a form of therapy and relaxation.</div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1200">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>etc</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <span>etc</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@calligraphy.com</span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form id="contactForm" onsubmit="return false;" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required 
+                               minlength="2" maxlength="50" 
+                               pattern="[A-Za-z\s]+"
+                               placeholder=" ">
+                        <label for="name">Your Name</label>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               placeholder=" ">
+                        <label for="email">Your Email</label>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required 
+                                  minlength="10" maxlength="1000"
+                                  placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="button" class="contact-btn" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="spinner"></div>
+                        <div class="checkmark"></div>
+                    </button>
+                </form>
+                <div id="formSuccess" class="form-feedback success" style="display: none;">
+                    Message sent successfully!
+                </div>
+                <div id="formError" class="form-feedback error" style="display: none;">
+                    There was an error sending your message. Please try again.
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="footer-socials">
+            <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="social-tooltip">Follow us on Instagram</span>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+                <span class="social-tooltip">Follow us on Twitter</span>
+            </a>
+            <a href="#" class="social-link" title="Facebook">
+                <i class="fab fa-facebook"></i>
+                <span class="social-tooltip">Like us on Facebook</span>
+            </a>
+            <a href="#" class="social-link" title="Pinterest">
+                <i class="fab fa-pinterest"></i>
+                <span class="social-tooltip">Follow us on Pinterest</span>
+            </a>
+            <a href="#" class="social-link" title="YouTube">
+                <i class="fab fa-youtube"></i>
+                <span class="social-tooltip">Subscribe on YouTube</span>
+            </a>
+            <a href="#" class="social-link" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+                <span class="social-tooltip">Follow us on TikTok</span>
+            </a>
+        </div>
+        <div class="footer-logo">Scratchy Nib</div>
+        <div class="footer-copy">&copy; 2025 Scatchy Nib  (Umar Ali Khan). All rights reserved.</div>
+    </footer>
+    <script>
+        // Scrollspy for navbar
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = [
+            document.getElementById('home'),
+            document.getElementById('calligraphy-styles'),
+            document.getElementById('history'),
+            document.getElementById('why-calligraphy'),
+            document.getElementById('contact')
+        ];
+
+        function setActiveLink() {
+            let index = 0;
+            for (let i = 0; i < sections.length; i++) {
+                const rect = sections[i].getBoundingClientRect();
+                if (rect.top <= 80) index = i;
+            }
+            navLinks.forEach(l => l.classList.remove('active'));
+            if (navLinks[index]) navLinks[index].classList.add('active');
+        }
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink();
+        // Navbar shadow/blur on scroll
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <script>
+        // --- History Card Expansion/Collapse and Interactivity ---
+        const historyCards = document.querySelectorAll('.history-card');
+        historyCards.forEach(card => {
+            // Hover/focus for visual feedback
+            card.addEventListener('mouseenter', () => card.classList.add('expanded'));
+            card.addEventListener('mouseleave', () => card.classList.remove('expanded'));
+            card.addEventListener('focusin', () => card.classList.add('expanded'));
+            card.addEventListener('focusout', () => card.classList.remove('expanded'));
+            // Click/tap for expansion/collapse
+            card.addEventListener('click', function(e) {
+                // Collapse all other cards
+                historyCards.forEach(c => {
+                    if (c !== card) c.classList.remove('expanded');
+                });
+                // Toggle this card
+                card.classList.toggle('expanded');
+            });
+            // Keyboard accessibility: expand/collapse on Enter/Space
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    historyCards.forEach(c => {
+                        if (c !== card) c.classList.remove('expanded');
+                    });
+                    card.classList.toggle('expanded');
+                }
+            });
+        });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // Hide scrollbars while loader is visible
+            document.body.classList.add('no-scroll');
+            setTimeout(function() {
+                document.getElementById('loaderOverlay').classList.add('hide');
+                document.body.classList.remove('no-scroll');
+            }, 3000);
+        });
+    </script>
+    <script>
+        // --- Mobile Navbar Hamburger Menu ---
+        const hamburger = document.querySelector('.nav-hamburger');
+        const navLinksMenu = document.querySelector('.nav-links');
+        const mobileBackdrop = document.querySelector('.mobile-backdrop');
+        let isMenuOpen = false;
+
+        function toggleMobileMenu(shouldOpen) {
+            isMenuOpen = typeof shouldOpen === 'boolean' ? shouldOpen : !isMenuOpen;
+            hamburger.classList.toggle('active', isMenuOpen);
+            navLinksMenu.classList.toggle('mobile-open', isMenuOpen);
+            mobileBackdrop.classList.toggle('active', isMenuOpen);
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', () => toggleMobileMenu());
+        mobileBackdrop.addEventListener('click', () => toggleMobileMenu(false));
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) {
+                    toggleMobileMenu(false);
+                }
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuOpen) {
+                toggleMobileMenu(false);
+            }
+        });
+
+        // Prevent menu from staying open on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900 && isMenuOpen) {
+                toggleMobileMenu(false);
+            }
+        });
+    </script>
+    <script>
+        // --- Feature Card Video Hover Play/Pause ---
+        document.querySelectorAll('.feature-card .vid').forEach(vid => {
+            vid.addEventListener('mouseenter', function() {
+                this.play();
+            });
+            vid.addEventListener('mouseleave', function() {
+                this.pause();
+                this.currentTime = 0;
+            });
+            // For keyboard accessibility (focus)
+            vid.parentElement.addEventListener('focusin', function() {
+                vid.play();
+            });
+            vid.parentElement.addEventListener('focusout', function() {
+                vid.pause();
+                vid.currentTime = 0;
+            });
+        });
+    </script>
+    <script>
+        // --- Animated Counter for Stats ---
+        function animateCounter(el, target, duration = 1200) {
+            let start = 0;
+            let startTime = null;
+
+            function updateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+                el.textContent = Math.floor(progress * (target - start) + start);
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    el.textContent = target;
+                }
+            }
+            requestAnimationFrame(updateCounter);
+        }
+        document.addEventListener('aos:in:stats-section', function() {
+            document.querySelectorAll('.stat-num').forEach(el => {
+                const target = parseInt(el.getAttribute('data-count'), 10);
+                if (!isNaN(target)) animateCounter(el, target);
+            });
+        });
+        // Parallax effect for hero background
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY < window.innerHeight) {
+                hero.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
+            }
+        });
+    </script>
+    <script>
+        // --- Dynamic Background Change for Features Section ---
+        const featuresSection = document.querySelector('.features-section');
+        const featureCards = document.querySelectorAll('.features-grid .feature-card');
+        const defaultBg = featuresSection.style.background || window.getComputedStyle(featuresSection).background;
+        featureCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const bg = card.getAttribute('data-bg');
+                if (bg) featuresSection.style.background = bg;
+            });
+            card.addEventListener('mouseleave', function() {
+                featuresSection.style.background = '';
+            });
+            // For accessibility: focus/blur
+            card.addEventListener('focusin', function() {
+                const bg = card.getAttribute('data-bg');
+                if (bg) featuresSection.style.background = bg;
+            });
+            card.addEventListener('focusout', function() {
+                featuresSection.style.background = '';
+            });
+        });
+    </script>
+</body>
+
+</html>

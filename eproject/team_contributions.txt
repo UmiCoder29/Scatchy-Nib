@@ -1,0 +1,95 @@
+# Scratchy Nib - Team Contributions
+
+## Umar (Main Lead)
+### HTML Contributions
+- Overall site structure and layout
+- Loader overlay implementation
+- Hero section with video background
+- Contact section structure
+- Footer with social links
+- Floating navigation menu structure
+
+### CSS Contributions
+- Loader overlay animations and styling
+- Hero section styling and video overlay
+- Contact form styling and animations
+- Footer styling and social icons
+- Floating navigation styling and animations
+- Global styles and variables
+- Responsive design breakpoints
+
+### JavaScript Contributions
+- Page load handling and loader overlay
+- Hero video background handling
+- Contact form submission logic
+- Floating navigation functionality
+- Overall site initialization
+
+## Ayan
+### HTML Contributions
+- Navigation bar structure
+- Mobile menu structure
+- Dropdown menu implementation
+- Hamburger menu button
+
+### CSS Contributions
+- Navigation bar styling
+- Mobile menu animations
+- Dropdown menu styling
+- Hamburger button animations
+- Responsive navigation styles
+
+### JavaScript Contributions
+- Navigation bar scroll behavior
+- Mobile menu toggle functionality
+- Dropdown menu logic
+- Scrollspy for active link highlighting
+- Mobile navigation event handlers
+
+## Rizwan
+### HTML Contributions
+- Features section structure
+- Calligraphy styles showcase grid
+- Feature cards with images and videos
+- Text overlays and descriptions
+
+### CSS Contributions
+- Features section styling
+- Feature card animations
+- Image and video hover effects
+- Text overlay transitions
+- Grid layout and responsiveness
+
+### JavaScript Contributions
+- Feature card hover animations
+- Video playback controls
+- Dynamic background changes
+- Feature section interactions
+
+## Asghar
+### HTML Contributions
+- History section with interactive cards
+- Why Calligraphy section with bento grid
+- Contact form structure
+- Form validation elements
+
+### CSS Contributions
+- History card animations and styling
+- Bento grid layout and design
+- Contact form styling
+- Interactive card hover effects
+- Form validation styles
+
+### JavaScript Contributions
+- History card expansion/collapse logic
+- Bento grid animations
+- Contact form validation
+- Form submission handling
+- Interactive card behaviors
+
+## Shared Responsibilities
+- Code review and optimization
+- Cross-browser compatibility
+- Performance optimization
+- Accessibility implementation
+- Responsive design testing 
